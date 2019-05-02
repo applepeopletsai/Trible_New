@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExperienceHomeCollectionViewCell_Image" id="F0z-UI-Veb" customClass="ExperienceHomeCollectionViewCell_Image" customModule="TribleHome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOV-qM-ZV1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="001" translatesAutoresizingMaskIntoConstraints="NO" id="APa-zn-uCv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5個體驗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAA-yP-6m5">
+                                <rect key="frame" x="10" y="125.5" width="44.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="奧捷" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgL-Ke-2QA">
+                                <rect key="frame" x="10" y="100" width="35" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iAA-yP-6m5" firstAttribute="top" secondItem="JgL-Ke-2QA" secondAttribute="bottom" constant="5" id="8fe-gr-KwO"/>
+                            <constraint firstAttribute="bottom" secondItem="iAA-yP-6m5" secondAttribute="bottom" constant="10" id="9zv-F8-W19"/>
+                            <constraint firstItem="APa-zn-uCv" firstAttribute="leading" secondItem="KOV-qM-ZV1" secondAttribute="leading" id="ALK-OT-ewo"/>
+                            <constraint firstAttribute="bottom" secondItem="APa-zn-uCv" secondAttribute="bottom" id="JYe-IK-twT"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iAA-yP-6m5" secondAttribute="trailing" constant="10" id="QVT-6U-3hp"/>
+                            <constraint firstItem="JgL-Ke-2QA" firstAttribute="leading" secondItem="KOV-qM-ZV1" secondAttribute="leading" constant="10" id="QZR-oc-YfH"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JgL-Ke-2QA" secondAttribute="trailing" constant="10" id="R85-Qa-RH4"/>
+                            <constraint firstItem="iAA-yP-6m5" firstAttribute="leading" secondItem="KOV-qM-ZV1" secondAttribute="leading" constant="10" id="Yv2-V3-uCF"/>
+                            <constraint firstAttribute="trailing" secondItem="APa-zn-uCv" secondAttribute="trailing" id="hIy-mZ-orD"/>
+                            <constraint firstItem="APa-zn-uCv" firstAttribute="top" secondItem="KOV-qM-ZV1" secondAttribute="top" id="xEg-Nf-1V0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="KOV-qM-ZV1" secondAttribute="trailing" id="2Wc-Du-z5H"/>
+                <constraint firstItem="KOV-qM-ZV1" firstAttribute="leading" secondItem="F0z-UI-Veb" secondAttribute="leading" id="Rm8-JC-aW1"/>
+                <constraint firstAttribute="bottom" secondItem="KOV-qM-ZV1" secondAttribute="bottom" id="jjJ-kd-fV5"/>
+                <constraint firstItem="KOV-qM-ZV1" firstAttribute="top" secondItem="F0z-UI-Veb" secondAttribute="top" id="kV6-vi-BkX"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="RNS-BC-wm8"/>
+            <connections>
+                <outlet property="experienceCountLabel" destination="iAA-yP-6m5" id="GwT-TE-Spg"/>
+                <outlet property="locationLabel" destination="JgL-Ke-2QA" id="HsA-s7-RcY"/>
+                <outlet property="photoImageView" destination="APa-zn-uCv" id="tCT-Z9-lwu"/>
+            </connections>
+            <point key="canvasLocation" x="-99" y="96"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="001" width="1273" height="955"/>
+    </resources>
+</document>

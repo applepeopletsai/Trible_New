@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExperienceHomeTableViewCell" id="OpF-8m-48n" customClass="ExperienceHomeTableViewCell" customModule="TribleHome" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OpF-8m-48n" id="Xh3-pZ-BUD">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="239.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="體驗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3g-4H-fYc">
+                        <rect key="frame" x="5" y="10" width="33" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="osp-SE-T6l"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="D3a-IP-9ZN" customClass="ExperienceHomeCollectionView" customModule="TribleHome" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="36" width="320" height="203.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="fmG-av-yyY">
+                            <size key="itemSize" width="200" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="D3a-IP-9ZN" firstAttribute="leading" secondItem="Xh3-pZ-BUD" secondAttribute="leading" id="5wg-9u-Hwf"/>
+                    <constraint firstAttribute="trailing" secondItem="D3a-IP-9ZN" secondAttribute="trailing" id="Ilo-Tq-ToB"/>
+                    <constraint firstItem="U3g-4H-fYc" firstAttribute="leading" secondItem="Xh3-pZ-BUD" secondAttribute="leading" constant="5" id="Vfn-nP-rFx"/>
+                    <constraint firstItem="U3g-4H-fYc" firstAttribute="top" secondItem="Xh3-pZ-BUD" secondAttribute="top" constant="10" id="eql-gj-hiZ"/>
+                    <constraint firstAttribute="bottom" secondItem="D3a-IP-9ZN" secondAttribute="bottom" id="jum-5A-lTK"/>
+                    <constraint firstItem="D3a-IP-9ZN" firstAttribute="top" secondItem="U3g-4H-fYc" secondAttribute="bottom" constant="5" id="uMd-uD-Sbi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="D3a-IP-9ZN" id="qTL-aL-W0P"/>
+            </connections>
+            <point key="canvasLocation" x="-179.19999999999999" y="74.662668665667169"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyExperienceListCell" rowHeight="100" id="Mun-vp-Vdm" customClass="MyExperienceListCell" customModule="Trible" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mun-vp-Vdm" id="qd8-i8-yzk">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ba-LZ-t5A">
+                        <rect key="frame" x="10" y="40" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Lgk-zK-q7P"/>
+                            <constraint firstAttribute="width" constant="20" id="S6X-yV-416"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IP3-cb-Td3">
+                        <rect key="frame" x="40" y="5" width="89.5" height="89.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="IP3-cb-Td3" secondAttribute="height" multiplier="1:1" id="3nQ-5p-fRW"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台灣的深夜食堂" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVU-JI-ZNZ">
+                        <rect key="frame" x="139.5" y="5" width="121.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqd-om-eoR">
+                        <rect key="frame" x="139.5" y="27.5" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lF-8Q-0Nd" customClass="StarProgressView" customModule="Trible" customModuleProvider="target">
+                        <rect key="frame" x="139.5" y="27.5" width="225.5" height="10"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="BYs-OS-2fs"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="progressViewBackgroundColor">
+                                <color key="value" red="0.19215686269999999" green="0.81568627449999997" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最後更新日期：2018/12/26" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOW-rc-sBv">
+                        <rect key="frame" x="139.5" y="78.5" width="161.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XOW-rc-sBv" secondAttribute="trailing" constant="10" id="3GX-QG-qnS"/>
+                    <constraint firstItem="IP3-cb-Td3" firstAttribute="top" secondItem="qd8-i8-yzk" secondAttribute="top" constant="5" id="CL5-WW-F9B"/>
+                    <constraint firstItem="3lF-8Q-0Nd" firstAttribute="leading" secondItem="IP3-cb-Td3" secondAttribute="trailing" constant="10" id="CLF-gs-nku"/>
+                    <constraint firstItem="5Ba-LZ-t5A" firstAttribute="leading" secondItem="qd8-i8-yzk" secondAttribute="leading" constant="10" id="CZt-F5-PLU"/>
+                    <constraint firstItem="XOW-rc-sBv" firstAttribute="bottom" secondItem="IP3-cb-Td3" secondAttribute="bottom" id="L1w-Ys-I4s"/>
+                    <constraint firstItem="3lF-8Q-0Nd" firstAttribute="top" secondItem="gVU-JI-ZNZ" secondAttribute="bottom" constant="2" id="LgS-D3-CG7"/>
+                    <constraint firstItem="XOW-rc-sBv" firstAttribute="leading" secondItem="IP3-cb-Td3" secondAttribute="trailing" constant="10" id="Mzl-BT-fBD"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gVU-JI-ZNZ" secondAttribute="trailing" constant="10" id="VZR-3c-BZb"/>
+                    <constraint firstAttribute="bottom" secondItem="IP3-cb-Td3" secondAttribute="bottom" constant="5" id="buA-e9-3rC"/>
+                    <constraint firstItem="gVU-JI-ZNZ" firstAttribute="top" secondItem="IP3-cb-Td3" secondAttribute="top" id="fUu-JC-Zbf"/>
+                    <constraint firstItem="Dqd-om-eoR" firstAttribute="top" secondItem="gVU-JI-ZNZ" secondAttribute="bottom" constant="2" id="fZL-Ku-40e"/>
+                    <constraint firstItem="Dqd-om-eoR" firstAttribute="leading" secondItem="IP3-cb-Td3" secondAttribute="trailing" constant="10" id="jPn-Sf-Lja"/>
+                    <constraint firstItem="5Ba-LZ-t5A" firstAttribute="centerY" secondItem="qd8-i8-yzk" secondAttribute="centerY" id="jb8-SE-BzO"/>
+                    <constraint firstAttribute="trailing" secondItem="3lF-8Q-0Nd" secondAttribute="trailing" constant="10" id="jdo-Ch-90a"/>
+                    <constraint firstItem="gVU-JI-ZNZ" firstAttribute="leading" secondItem="IP3-cb-Td3" secondAttribute="trailing" constant="10" id="oZ5-SX-Gfz"/>
+                    <constraint firstItem="IP3-cb-Td3" firstAttribute="leading" secondItem="5Ba-LZ-t5A" secondAttribute="trailing" constant="10" id="vvt-2E-cPl"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Dqd-om-eoR" secondAttribute="trailing" constant="10" id="yKU-Pb-Vwf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="progressView" destination="3lF-8Q-0Nd" id="Ikm-iJ-bvb"/>
+            </connections>
+            <point key="canvasLocation" x="-56.799999999999997" y="120.53973013493254"/>
+        </tableViewCell>
+    </objects>
+</document>

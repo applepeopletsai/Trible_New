@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ExperienceDetailCell_SharerInfo" rowHeight="130" id="sD4-dY-zWY" customClass="ExperienceDetailCell_SharerInfo" customModule="ExperienceDetail" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sD4-dY-zWY" id="CHU-TH-dWQ">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="130.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cYy-Mz-4uk">
+                        <rect key="frame" x="255" y="15" width="100" height="100"/>
+                        <color key="backgroundColor" red="0.047058823530000002" green="0.74509803919999995" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="9Yf-Js-4aq"/>
+                            <constraint firstAttribute="height" constant="100" id="DOJ-y7-Fih"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qgc-U6-F2T">
+                        <rect key="frame" x="15" y="129.5" width="345" height="1"/>
+                        <color key="backgroundColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="7ip-7B-e50"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XE2-y9-7kY">
+                        <rect key="frame" x="20" y="20" width="225" height="90.5"/>
+                        <string key="text">分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹分享家介紹</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XE2-y9-7kY" firstAttribute="top" secondItem="CHU-TH-dWQ" secondAttribute="top" constant="20" id="37X-bw-igQ"/>
+                    <constraint firstItem="cYy-Mz-4uk" firstAttribute="top" secondItem="CHU-TH-dWQ" secondAttribute="top" constant="15" id="3s3-Zx-lil"/>
+                    <constraint firstAttribute="trailing" secondItem="cYy-Mz-4uk" secondAttribute="trailing" constant="20" id="7kv-k8-Cyk"/>
+                    <constraint firstAttribute="bottom" secondItem="Qgc-U6-F2T" secondAttribute="bottom" id="DIb-qL-TRR"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="cYy-Mz-4uk" secondAttribute="bottom" constant="15" id="QG2-7H-SLm"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XE2-y9-7kY" secondAttribute="bottom" constant="20" id="gU3-ka-rZd"/>
+                    <constraint firstItem="XE2-y9-7kY" firstAttribute="leading" secondItem="CHU-TH-dWQ" secondAttribute="leading" constant="20" id="gip-DS-6sa"/>
+                    <constraint firstItem="cYy-Mz-4uk" firstAttribute="leading" secondItem="XE2-y9-7kY" secondAttribute="trailing" constant="10" id="k5z-QD-4ZC"/>
+                    <constraint firstItem="Qgc-U6-F2T" firstAttribute="leading" secondItem="CHU-TH-dWQ" secondAttribute="leading" constant="15" id="rNN-ti-rRF"/>
+                    <constraint firstAttribute="trailing" secondItem="Qgc-U6-F2T" secondAttribute="trailing" constant="15" id="zsf-kZ-B0p"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="headerImageView" destination="cYy-Mz-4uk" id="cDJ-ck-TKx"/>
+                <outlet property="introductionLabel" destination="XE2-y9-7kY" id="Vbl-op-UXv"/>
+            </connections>
+            <point key="canvasLocation" x="-16.800000000000001" y="109.29535232383809"/>
+        </tableViewCell>
+    </objects>
+</document>

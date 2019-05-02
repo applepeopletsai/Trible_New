@@ -1,0 +1,6 @@
+framework module Pods_Trible_DEV {
+  umbrella header "Pods-Trible_DEV-umbrella.h"
+
+  export *
+  module * { export * }
+}

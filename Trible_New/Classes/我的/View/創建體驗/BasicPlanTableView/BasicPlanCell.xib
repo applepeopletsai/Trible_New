@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="BasicPlanCell" id="UxW-tt-MMs" customClass="BasicPlanCell" customModule="Trible_New" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UxW-tt-MMs" id="KLf-2P-nht">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNc-IQ-WVd">
+                        <rect key="frame" x="30" y="43" width="315" height="0.5"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="U9L-ca-Ihj"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhd-65-SaS">
+                        <rect key="frame" x="30" y="11.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="TNc-IQ-WVd" firstAttribute="leading" secondItem="KLf-2P-nht" secondAttribute="leading" constant="30" id="09k-jV-4tM"/>
+                    <constraint firstItem="uhd-65-SaS" firstAttribute="leading" secondItem="KLf-2P-nht" secondAttribute="leading" constant="30" id="2pV-Op-zF9"/>
+                    <constraint firstItem="uhd-65-SaS" firstAttribute="centerY" secondItem="KLf-2P-nht" secondAttribute="centerY" id="O1B-1h-K77"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uhd-65-SaS" secondAttribute="trailing" constant="30" id="UHd-Qf-0oa"/>
+                    <constraint firstAttribute="bottom" secondItem="TNc-IQ-WVd" secondAttribute="bottom" id="v1L-1E-WgZ"/>
+                    <constraint firstAttribute="trailing" secondItem="TNc-IQ-WVd" secondAttribute="trailing" constant="30" id="y9L-8D-V5O"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="uhd-65-SaS" id="0Oh-eK-fEi"/>
+            </connections>
+            <point key="canvasLocation" x="-76" y="119"/>
+        </tableViewCell>
+    </objects>
+</document>

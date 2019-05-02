@@ -1,0 +1,137 @@
+PODS:
+  - Alamofire (4.8.2)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
+  - DKCamera (1.6.4)
+  - DKImagePickerController/Camera (4.1.4):
+    - DKCamera
+    - DKImagePickerController/Core
+  - DKImagePickerController/Core (4.1.4):
+    - DKImagePickerController/ImageDataManager
+    - DKImagePickerController/Resource
+  - DKImagePickerController/ImageDataManager (4.1.4)
+  - DKImagePickerController/InlineCamera (4.1.4):
+    - DKCamera
+    - DKImagePickerController/Core
+  - DKImagePickerController/PhotoGallery (4.1.4):
+    - DKImagePickerController/Core
+    - DKPhotoGallery
+  - DKImagePickerController/Resource (4.1.4)
+  - DKPhotoGallery (0.0.12):
+    - DKPhotoGallery/Core (= 0.0.12)
+    - DKPhotoGallery/Model (= 0.0.12)
+    - DKPhotoGallery/Preview (= 0.0.12)
+    - DKPhotoGallery/Resource (= 0.0.12)
+    - SDWebImage/GIF
+  - DKPhotoGallery/Core (0.0.12):
+    - DKPhotoGallery/Model
+    - DKPhotoGallery/Preview
+    - SDWebImage/GIF
+  - DKPhotoGallery/Model (0.0.12):
+    - SDWebImage/GIF
+  - DKPhotoGallery/Preview (0.0.12):
+    - DKPhotoGallery/Model
+    - DKPhotoGallery/Resource
+    - SDWebImage/GIF
+  - DKPhotoGallery/Resource (0.0.12):
+    - SDWebImage/GIF
+  - FBSDKCoreKit (4.44.1):
+    - Bolts (~> 1.9)
+  - FBSDKLoginKit (4.44.1):
+    - FBSDKCoreKit
+  - FLAnimatedImage (1.0.12)
+  - GoogleSignIn (4.4.0):
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleToolboxForMac/DebugUtils (2.2.0):
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+  - GoogleToolboxForMac/Defines (2.2.0)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.2.0)":
+    - GoogleToolboxForMac/DebugUtils (= 2.2.0)
+    - GoogleToolboxForMac/Defines (= 2.2.0)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.2.0)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.2.0)"
+  - GTMSessionFetcher/Core (1.2.1)
+  - IQKeyboardManagerSwift (6.2.1)
+  - JTAppleCalendar (7.1.7)
+  - Kingfisher (5.4.0)
+  - NVActivityIndicatorView (4.7.0):
+    - NVActivityIndicatorView/Presenter (= 4.7.0)
+  - NVActivityIndicatorView/Presenter (4.7.0)
+  - SDWebImage/Core (4.4.6)
+  - SDWebImage/GIF (4.4.6):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage/Core
+  - SwiftMessages (6.0.2):
+    - SwiftMessages/App (= 6.0.2)
+  - SwiftMessages/App (6.0.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - DKImagePickerController/Camera (from `https://github.com/zhangao0086/DKImagePickerController.git`, branch `develop`)
+  - DKImagePickerController/InlineCamera (from `https://github.com/zhangao0086/DKImagePickerController.git`, branch `develop`)
+  - DKImagePickerController/PhotoGallery (from `https://github.com/zhangao0086/DKImagePickerController.git`, branch `develop`)
+  - FBSDKLoginKit
+  - GoogleSignIn
+  - IQKeyboardManagerSwift
+  - JTAppleCalendar
+  - Kingfisher
+  - NVActivityIndicatorView
+  - SwiftMessages
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Bolts
+    - DKCamera
+    - DKPhotoGallery
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FLAnimatedImage
+    - GoogleSignIn
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
+    - IQKeyboardManagerSwift
+    - JTAppleCalendar
+    - Kingfisher
+    - NVActivityIndicatorView
+    - SDWebImage
+    - SwiftMessages
+
+EXTERNAL SOURCES:
+  DKImagePickerController:
+    :branch: develop
+    :git: https://github.com/zhangao0086/DKImagePickerController.git
+
+CHECKOUT OPTIONS:
+  DKImagePickerController:
+    :commit: 95ee085be7ef2b0997617b47dc71e45a54ff9dc0
+    :git: https://github.com/zhangao0086/DKImagePickerController.git
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  DKCamera: 61fa47629a39354e5111bca1fe96695de020dcb9
+  DKImagePickerController: 1b21dd7ba0eb488ef0869d1eb6f23b3534b69bb5
+  DKPhotoGallery: 1b4d65d9a485dfdd2002f22daa5b955eafb350ea
+  FBSDKCoreKit: a823ae35bdb60ebb8d7a7e51abe7c5d87d2bfced
+  FBSDKLoginKit: 54ae59987f2a8703021557c90a9aebb9e5c2bef6
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  GoogleSignIn: 7ff245e1a7b26d379099d3243a562f5747e23d39
+  GoogleToolboxForMac: ff31605b7d66400dcec09bed5861689aebadda4d
+  GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
+  IQKeyboardManagerSwift: 0f0ae8935360b4003e6ea1ac7c19898f01e2f7c7
+  JTAppleCalendar: 96da4d8388fa6dc82d6a60d41ef36a015e167e2f
+  Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
+  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
+  SwiftMessages: 8b3cc68dba2f1c91aac1a74c90b10287aac35371
+
+PODFILE CHECKSUM: e1498d4133baa5bd66161ee8572fd7678d5d5bb0
+
+COCOAPODS: 1.6.1

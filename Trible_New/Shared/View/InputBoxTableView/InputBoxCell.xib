@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="InputBoxCell" id="wuB-d0-iQU" customClass="InputBoxCell" customModule="Trible_New" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wuB-d0-iQU" id="sNe-8z-BZo">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jeh-30-pLn" customClass="IBInspectableTextField" customModule="Trible_New" customModuleProvider="target">
+                        <rect key="frame" x="5" y="5" width="320.5" height="39.5"/>
+                        <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="textPadding">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="inputTextDidChanged:" destination="wuB-d0-iQU" eventType="editingChanged" id="g0T-bV-2Oh"/>
+                            <outlet property="delegate" destination="wuB-d0-iQU" id="TwK-wK-b1A"/>
+                        </connections>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YI-Nj-h06" customClass="IBInspectableButton" customModule="Trible_New" customModuleProvider="target">
+                        <rect key="frame" x="330.5" y="5" width="39.5" height="39.5"/>
+                        <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="5YI-Nj-h06" secondAttribute="height" multiplier="1:1" id="ANZ-4X-8KN"/>
+                        </constraints>
+                        <state key="normal" image="btn_add_green"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="rightButtonPress:" destination="wuB-d0-iQU" eventType="touchUpInside" id="ULI-in-HjJ"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="jeh-30-pLn" secondAttribute="bottom" constant="5" id="4Q3-ic-Jhw"/>
+                    <constraint firstAttribute="trailing" secondItem="5YI-Nj-h06" secondAttribute="trailing" constant="5" id="8Mh-uh-H4b"/>
+                    <constraint firstItem="5YI-Nj-h06" firstAttribute="leading" secondItem="jeh-30-pLn" secondAttribute="trailing" constant="5" id="FdN-JM-ar8"/>
+                    <constraint firstItem="jeh-30-pLn" firstAttribute="top" secondItem="sNe-8z-BZo" secondAttribute="top" constant="5" id="Q3L-gl-6jM"/>
+                    <constraint firstItem="jeh-30-pLn" firstAttribute="leading" secondItem="sNe-8z-BZo" secondAttribute="leading" constant="5" id="aXp-o3-Y8j"/>
+                    <constraint firstItem="5YI-Nj-h06" firstAttribute="top" secondItem="sNe-8z-BZo" secondAttribute="top" constant="5" id="euL-Pf-zN9"/>
+                    <constraint firstAttribute="bottom" secondItem="5YI-Nj-h06" secondAttribute="bottom" constant="5" id="mJV-vE-yVR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="inputTextField" destination="jeh-30-pLn" id="HDO-mH-lBv"/>
+                <outlet property="rightButton" destination="5YI-Nj-h06" id="uz4-ia-d5t"/>
+            </connections>
+            <point key="canvasLocation" x="194" y="61"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="btn_add_green" width="10" height="10"/>
+    </resources>
+</document>

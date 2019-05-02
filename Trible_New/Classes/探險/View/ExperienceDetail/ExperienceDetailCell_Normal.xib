@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ExperienceDetailCell_Normal" rowHeight="50" id="7Tw-TG-eKl" customClass="ExperienceDetailCell_Normal" customModule="ExperienceDetail" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Tw-TG-eKl" id="mIa-8w-Ihz">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CE-av-UgS">
+                        <rect key="frame" x="20" y="0.0" width="30" height="50.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="qqn-hg-hhk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGt-ig-Kbf">
+                        <rect key="frame" x="15" y="49.5" width="345" height="1"/>
+                        <color key="backgroundColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="9dO-pL-lEd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7CE-av-UgS" firstAttribute="top" secondItem="mIa-8w-Ihz" secondAttribute="top" id="5bv-QN-XgZ"/>
+                    <constraint firstAttribute="bottom" secondItem="ZGt-ig-Kbf" secondAttribute="bottom" id="61Q-hq-Hfw"/>
+                    <constraint firstItem="7CE-av-UgS" firstAttribute="centerY" secondItem="mIa-8w-Ihz" secondAttribute="centerY" id="8Ad-CW-Vqs"/>
+                    <constraint firstItem="ZGt-ig-Kbf" firstAttribute="leading" secondItem="mIa-8w-Ihz" secondAttribute="leading" constant="15" id="RoT-Ji-0eh"/>
+                    <constraint firstAttribute="bottom" secondItem="7CE-av-UgS" secondAttribute="bottom" id="S8X-n7-qax"/>
+                    <constraint firstAttribute="trailing" secondItem="ZGt-ig-Kbf" secondAttribute="trailing" constant="15" id="bXi-Uv-lAp"/>
+                    <constraint firstItem="7CE-av-UgS" firstAttribute="leading" secondItem="mIa-8w-Ihz" secondAttribute="leading" constant="20" id="wZK-4P-gwW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="7CE-av-UgS" id="yM0-XV-LDK"/>
+            </connections>
+            <point key="canvasLocation" x="124" y="5.3973013493253381"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarCollectionCell" id="1Yc-MW-VWB" customClass="CalendarCollectionCell" customModule="Trible_New" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zg9-9h-ijt">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHf-XU-UTz">
+                                <rect key="frame" x="8.5" y="17" width="33" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zHf-XU-UTz" firstAttribute="centerY" secondItem="Zg9-9h-ijt" secondAttribute="centerY" id="2ld-dD-0Aj"/>
+                            <constraint firstItem="zHf-XU-UTz" firstAttribute="centerX" secondItem="Zg9-9h-ijt" secondAttribute="centerX" id="Zoc-Ed-g3p"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Zg9-9h-ijt" firstAttribute="top" secondItem="1Yc-MW-VWB" secondAttribute="top" id="e6z-xB-W8p"/>
+                <constraint firstAttribute="bottom" secondItem="Zg9-9h-ijt" secondAttribute="bottom" id="jcL-1J-S5Q"/>
+                <constraint firstAttribute="trailing" secondItem="Zg9-9h-ijt" secondAttribute="trailing" id="lvo-mB-uvh"/>
+                <constraint firstItem="Zg9-9h-ijt" firstAttribute="leading" secondItem="1Yc-MW-VWB" secondAttribute="leading" id="mlP-Hy-MD1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="GDa-xD-QDS"/>
+            <size key="customSize" width="125" height="95"/>
+            <connections>
+                <outlet property="bgView" destination="Zg9-9h-ijt" id="ZSO-WI-IZz"/>
+                <outlet property="dayLabel" destination="zHf-XU-UTz" id="zTJ-fB-IG5"/>
+            </connections>
+            <point key="canvasLocation" x="-147.19999999999999" y="77.361319340329842"/>
+        </collectionViewCell>
+    </objects>
+</document>
