@@ -1778,6 +1778,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.skywind.trible;
 				PRODUCT_NAME = Trible;
@@ -1802,6 +1803,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.skywind.trible;
 				PRODUCT_NAME = Trible;
 				SWIFT_OBJC_BRIDGING_HEADER = "Trible_New/Trible_UAT-Bridging-Header.h";
@@ -1940,6 +1942,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -DDEV -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.Daniel.Trible;
 				PRODUCT_NAME = Trible;
@@ -1964,6 +1967,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -DDEV";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.Daniel.Trible;
 				PRODUCT_NAME = Trible;
