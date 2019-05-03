@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias pickerConfirmHandler = (_ item: String, _ selectIndex: Int) -> Void
+
 class PickerViewController: UIViewController {
     
     @IBOutlet private weak var pickerView: UIPickerView!

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="maL-1C-UHA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="maL-1C-UHA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,11 +12,60 @@
         <!--Message Main View Controller-->
         <scene sceneID="5kB-UT-bDM">
             <objects>
-                <viewController storyboardIdentifier="MessageMainViewController" id="maL-1C-UHA" customClass="MessageMainViewController" customModule="Trible_New" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessageMainViewController" id="maL-1C-UHA" customClass="MessageMainViewController" customModule="Trible" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pwn-2P-zIh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w7r-tN-baC" customClass="MessageListTableView" customModule="Trible" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QTD-6r-YPk" customClass="IBInspectableView" customModule="Trible" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訊息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRN-an-SCC" customClass="IBInspectableLabel" customModule="Trible" customModuleProvider="target">
+                                        <rect key="frame" x="170" y="12" width="35" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="titleLocalizedKey" value="Lang_MG_001"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="oRN-an-SCC" firstAttribute="centerX" secondItem="QTD-6r-YPk" secondAttribute="centerX" id="epa-Vh-3XC"/>
+                                    <constraint firstItem="oRN-an-SCC" firstAttribute="centerY" secondItem="QTD-6r-YPk" secondAttribute="centerY" id="qCA-ob-JoH"/>
+                                    <constraint firstAttribute="height" constant="45" id="yjN-QZ-Aso"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QTD-6r-YPk" firstAttribute="leading" secondItem="uv5-91-71e" secondAttribute="leading" id="Bds-MH-Ra2"/>
+                            <constraint firstItem="uv5-91-71e" firstAttribute="bottom" secondItem="w7r-tN-baC" secondAttribute="bottom" id="Enj-aC-1jD"/>
+                            <constraint firstItem="w7r-tN-baC" firstAttribute="top" secondItem="QTD-6r-YPk" secondAttribute="bottom" id="H14-n8-YLP"/>
+                            <constraint firstItem="QTD-6r-YPk" firstAttribute="top" secondItem="uv5-91-71e" secondAttribute="top" id="LZm-78-d9L"/>
+                            <constraint firstItem="w7r-tN-baC" firstAttribute="trailing" secondItem="uv5-91-71e" secondAttribute="trailing" id="TLM-zA-GDz"/>
+                            <constraint firstItem="QTD-6r-YPk" firstAttribute="trailing" secondItem="uv5-91-71e" secondAttribute="trailing" id="Vcj-Zx-3zY"/>
+                            <constraint firstItem="w7r-tN-baC" firstAttribute="leading" secondItem="uv5-91-71e" secondAttribute="leading" id="uLD-yR-b3n"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uv5-91-71e"/>
                     </view>
                 </viewController>

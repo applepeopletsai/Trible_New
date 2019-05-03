@@ -58,7 +58,7 @@ class ExperienceDetailViewController: BaseViewController {
     }
     
     private func configureTopViewHeight() {
-        self.topViewHeight.constant = 45 + ((safeArea().top == 0) ? statusBarHeight : safeArea().top)
+        self.topViewHeight.constant = 45 + self.view.safeAreaInsets.top + statusBarHeight
     }
     
     fileprivate func updateHeaderView() {

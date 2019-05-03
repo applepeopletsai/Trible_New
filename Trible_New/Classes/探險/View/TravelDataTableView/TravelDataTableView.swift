@@ -8,34 +8,23 @@
 
 import UIKit
 
-class TravelDataTableView: UITableView {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        configureTableView()
+class TravelDataTableView: BaseTableView {
+    
+    // MARK: Override Function
+    override func configureTableView() {
+        super.configureTableView()
+        self.register(UINib(nibName: String(describing: TravelDataHeaderView.self), bundle: nil), forHeaderFooterViewReuseIdentifier: String(describing: TravelDataHeaderView.self))
+        self.register(UINib(nibName: String(describing: TravelDataExplorerCell.self), bundle: nil), forCellReuseIdentifier: TravelDataExplorerCell.identifier)
+        self.register(UINib(nibName: String(describing: TravelDataEmergencyContactCell.self), bundle: nil), forCellReuseIdentifier: TravelDataEmergencyContactCell.identifier)
+        self.register(UINib(nibName: String(describing: TravelDataRemarkCell.self), bundle: nil), forCellReuseIdentifier: TravelDataRemarkCell.identifier)
     }
     
-    // MARK: Method
-    private func configureTableView() {
-        self.dataSource = self
-        self.delegate = self
-        self.showsHorizontalScrollIndicator = false
-        self.showsVerticalScrollIndicator = false
-        self.allowsSelection = false
-        self.separatorColor = .clear
-        self.register(UINib(nibName: String(describing: TravelDataHeaderView.self), bundle: nil), forHeaderFooterViewReuseIdentifier: String(describing: TravelDataHeaderView.self))
-        self.register(UINib(nibName: String(describing: TravelDataExplorerCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TravelDataExplorerCell.self))
-        self.register(UINib(nibName: String(describing: TravelDataEmergencyContactCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TravelDataEmergencyContactCell.self))
-        self.register(UINib(nibName: String(describing: TravelDataRemarkCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TravelDataRemarkCell.self))
-    }
-}
-
-extension TravelDataTableView: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
+    // MARK: Override UITableViewDataSource
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 2
         } else {
@@ -43,7 +32,7 @@ extension TravelDataTableView: UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: TravelDataExplorerCell.identifier, for: indexPath) as! TravelDataExplorerCell
@@ -59,18 +48,16 @@ extension TravelDataTableView: UITableViewDataSource {
             return UITableViewCell()
         }
     }
-}
-
-extension TravelDataTableView: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    // MARK: Override UITableViewDelegate
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
             return 400
         case 1:
             return 290
         case 2:
-            return 150 
+            return 150
         default:
             return CGFloat.leastNormalMagnitude
         }

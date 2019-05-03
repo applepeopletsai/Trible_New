@@ -18,7 +18,7 @@ protocol InputBoxTableViewDelegate: class {
     func didUpdateInputTextArray(array: [String])
 }
 
-class InputBoxTableView: UITableView {
+class InputBoxTableView: BaseTableView {
     
     @IBInspectable var typeString: String = "ExperienceFeatures" {
         didSet {
@@ -41,13 +41,13 @@ class InputBoxTableView: UITableView {
     private var inputTextArray = [""]
     private weak var inputBoxTableViewDelegate: InputBoxTableViewDelegate?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        configureTableView()
+    // MARK: Override Function
+    override func configureTableView() {
+        super.configureTableView()
+        self.register(UINib(nibName: String(describing: InputBoxCell.self), bundle: nil), forCellReuseIdentifier: InputBoxCell.identifier)
     }
     
-    // MARK: Event Handelr
+    // MARK: Public Function
     func configureTableViewWith(inputTextArray: [String], delegate: InputBoxTableViewDelegate) {
         self.inputBoxTableViewDelegate = delegate
         self.inputTextArray = inputTextArray
@@ -58,29 +58,19 @@ class InputBoxTableView: UITableView {
         return inputTextArray
     }
     
-    private func configureTableView() {
-        self.dataSource = self
-        self.delegate = self
-        self.tableFooterView = UIView()
-        self.register(UINib(nibName: String(describing: InputBoxCell.self), bundle: nil), forCellReuseIdentifier: String(describing: InputBoxCell.self))
-    }
-}
-
-extension InputBoxTableView: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // MARK: Override UITableViewDataSource
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return inputTextArray.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: InputBoxCell.self), for: indexPath) as! InputBoxCell
         cell.configureCellWith(inputText: inputTextArray[indexPath.row], indexPath: indexPath, type: type, delegate: self)
         return cell
     }
-}
-
-extension InputBoxTableView: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    
+    // MARK: Override UITableViewDelegate
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
 }

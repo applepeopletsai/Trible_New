@@ -98,6 +98,14 @@
 		65793F1D2177694E008FFF1B /* ExperienceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65793F1C2177694E008FFF1B /* ExperienceMainViewController.swift */; };
 		65793F1F217769B3008FFF1B /* OrderMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65793F1E217769B3008FFF1B /* OrderMainViewController.swift */; };
 		6586FE1121E5DA1B009CA27F /* Step2MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6586FE1021E5DA1B009CA27F /* Step2MainViewController.swift */; };
+		65888528227BDA54001C3CBB /* MessageListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65888527227BDA54001C3CBB /* MessageListTableView.swift */; };
+		65888529227BDA54001C3CBB /* MessageListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65888527227BDA54001C3CBB /* MessageListTableView.swift */; };
+		6588852D227BDB86001C3CBB /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588852C227BDB86001C3CBB /* BaseTableView.swift */; };
+		6588852E227BDB86001C3CBB /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588852C227BDB86001C3CBB /* BaseTableView.swift */; };
+		65888530227BE5BF001C3CBB /* MessageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588852F227BE5BF001C3CBB /* MessageListCell.swift */; };
+		65888531227BE5BF001C3CBB /* MessageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588852F227BE5BF001C3CBB /* MessageListCell.swift */; };
+		65888533227BECDD001C3CBB /* MessageListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65888532227BECDD001C3CBB /* MessageListCell.xib */; };
+		65888534227BECDD001C3CBB /* MessageListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65888532227BECDD001C3CBB /* MessageListCell.xib */; };
 		65917F57225EE4C9001C917E /* InputVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65917F56225EE4C9001C917E /* InputVerifyViewController.swift */; };
 		65917F58225EE4C9001C917E /* InputVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65917F56225EE4C9001C917E /* InputVerifyViewController.swift */; };
 		65917F5A225F0F7B001C917E /* MemberManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65917F59225F0F7B001C917E /* MemberManager.swift */; };
@@ -405,6 +413,10 @@
 		65793F1C2177694E008FFF1B /* ExperienceMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceMainViewController.swift; sourceTree = "<group>"; };
 		65793F1E217769B3008FFF1B /* OrderMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMainViewController.swift; sourceTree = "<group>"; };
 		6586FE1021E5DA1B009CA27F /* Step2MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step2MainViewController.swift; sourceTree = "<group>"; };
+		65888527227BDA54001C3CBB /* MessageListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListTableView.swift; sourceTree = "<group>"; };
+		6588852C227BDB86001C3CBB /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
+		6588852F227BE5BF001C3CBB /* MessageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListCell.swift; sourceTree = "<group>"; };
+		65888532227BECDD001C3CBB /* MessageListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageListCell.xib; sourceTree = "<group>"; };
 		65917F56225EE4C9001C917E /* InputVerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVerifyViewController.swift; sourceTree = "<group>"; };
 		65917F59225F0F7B001C917E /* MemberManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberManager.swift; sourceTree = "<group>"; };
 		65917F5C225F1260001C917E /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
@@ -766,7 +778,7 @@
 				657400072178BB420072C636 /* ExperienceHomeTableView */,
 				657400182178BC330072C636 /* ExperienceHomeCollectionView */,
 				657400192178BC850072C636 /* ExperienceListTableView */,
-				65C06F75219AA69600190464 /* ExperienceDetail */,
+				65C06F75219AA69600190464 /* ExperienceDetailCell */,
 				651D283F21C89B0F00152A5E /* TravelDataTableView */,
 			);
 			path = View;
@@ -805,6 +817,7 @@
 			isa = PBXGroup;
 			children = (
 				65261156217DFC1F006B0ECF /* Message.storyboard */,
+				65888526227BD9CD001C3CBB /* MessageListTableView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -853,6 +866,32 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		65888526227BD9CD001C3CBB /* MessageListTableView */ = {
+			isa = PBXGroup;
+			children = (
+				65888527227BDA54001C3CBB /* MessageListTableView.swift */,
+				6588852F227BE5BF001C3CBB /* MessageListCell.swift */,
+				65888532227BECDD001C3CBB /* MessageListCell.xib */,
+			);
+			path = MessageListTableView;
+			sourceTree = "<group>";
+		};
+		6588852A227BDB67001C3CBB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				65793F13217763DE008FFF1B /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6588852B227BDB72001C3CBB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6588852C227BDB86001C3CBB /* BaseTableView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		6596D22221E58A7100DDC4CC /* 創建體驗 */ = {
 			isa = PBXGroup;
 			children = (
@@ -896,6 +935,7 @@
 			isa = PBXGroup;
 			children = (
 				65C06FA3219AC8AA00190464 /* Shared.storyboard */,
+				6588852B227BDB72001C3CBB /* Base */,
 				653DEFBD2181FA7300ECBA94 /* IBInspectableUI */,
 				659D9978216A0A5E00152C48 /* CustomTabBar */,
 				659E111F219ACBB800C34DC5 /* CalendarCollectionView */,
@@ -919,7 +959,7 @@
 		659D997F216A110F00152C48 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				65793F13217763DE008FFF1B /* BaseViewController.swift */,
+				6588852A227BDB67001C3CBB /* Base */,
 				659D9981216A114400152C48 /* CustomTabBarController.swift */,
 				659E111D219ACB8B00C34DC5 /* SelectDateViewController.swift */,
 				65CCDFBB21A3AED800DEBCEB /* SelectPeopleCountViewController.swift */,
@@ -1000,7 +1040,7 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		65C06F75219AA69600190464 /* ExperienceDetail */ = {
+		65C06F75219AA69600190464 /* ExperienceDetailCell */ = {
 			isa = PBXGroup;
 			children = (
 				65C06F7E219AA79D00190464 /* ExperienceDetailCell_Info.swift */,
@@ -1016,7 +1056,7 @@
 				65C06F7D219AA79D00190464 /* ExperienceDetailCell_Normal.swift */,
 				65C06F81219AA79D00190464 /* ExperienceDetailCell_Normal.xib */,
 			);
-			path = ExperienceDetail;
+			path = ExperienceDetailCell;
 			sourceTree = "<group>";
 		};
 		65C06F96219ABEE100190464 /* UIPresentationController */ = {
@@ -1225,6 +1265,7 @@
 				65A5BE3B21F8438300B2EC75 /* ExperienceDetailCell_Info.xib in Resources */,
 				65A5BE3C21F8438300B2EC75 /* InputBoxCell.xib in Resources */,
 				65A5BE3D21F8438300B2EC75 /* TravelDataEmergencyContactCell.xib in Resources */,
+				65888534227BECDD001C3CBB /* MessageListCell.xib in Resources */,
 				65A5BE3E21F8438300B2EC75 /* ExperienceHomeCollectionViewCell_Image.xib in Resources */,
 				65A5BE3F21F8438300B2EC75 /* ExperienceDetailCell_Normal.xib in Resources */,
 				65A5BE4021F8438300B2EC75 /* Assets.xcassets in Resources */,
@@ -1266,6 +1307,7 @@
 				65C06F83219AA79D00190464 /* ExperienceDetailCell_Info.xib in Resources */,
 				6566708621EED04C00089AE1 /* InputBoxCell.xib in Resources */,
 				65525A9821C8C22D0041E5EE /* TravelDataEmergencyContactCell.xib in Resources */,
+				65888533227BECDD001C3CBB /* MessageListCell.xib in Resources */,
 				657400142178BC180072C636 /* ExperienceHomeCollectionViewCell_Image.xib in Resources */,
 				65C06F8D219AA79D00190464 /* ExperienceDetailCell_Normal.xib in Resources */,
 				65DDD5072187336A009B70CC /* Assets.xcassets in Resources */,
@@ -1538,6 +1580,7 @@
 				650B68BA2276A4DB00BC62C6 /* ExtensionUserDefaults.swift in Sources */,
 				65A5BDF121F8438300B2EC75 /* Step2_1ViewController.swift in Sources */,
 				65A5BDF221F8438300B2EC75 /* OtherPlanTableView.swift in Sources */,
+				6588852E227BDB86001C3CBB /* BaseTableView.swift in Sources */,
 				65A5BDF321F8438300B2EC75 /* SystemManager.swift in Sources */,
 				65E4EFAD2276957200200D53 /* LLFilledPageControl.swift in Sources */,
 				650B68AB2276A0FF00BC62C6 /* ExtensionString.swift in Sources */,
@@ -1550,6 +1593,7 @@
 				65A5BDF921F8438300B2EC75 /* Step2MainViewController.swift in Sources */,
 				65A5BDFA21F8438300B2EC75 /* IBInspectableImageView.swift in Sources */,
 				650B68D02276B32D00BC62C6 /* ExploreModels.swift in Sources */,
+				65888531227BE5BF001C3CBB /* MessageListCell.swift in Sources */,
 				65A5BDFB21F8438300B2EC75 /* MyExperienceListTableView.swift in Sources */,
 				65ACB8E4226870BF00AF34E3 /* Observable.swift in Sources */,
 				65A5BDFC21F8438300B2EC75 /* TravelDataTableView.swift in Sources */,
@@ -1575,6 +1619,7 @@
 				65A5BE0921F8438300B2EC75 /* Step3_1ViewController.swift in Sources */,
 				65A5BE0A21F8438300B2EC75 /* UploadPhotoTableView.swift in Sources */,
 				65A5BE0B21F8438300B2EC75 /* IBInspectableTextView.swift in Sources */,
+				65888529227BDA54001C3CBB /* MessageListTableView.swift in Sources */,
 				65A5BE0C21F8438300B2EC75 /* ExperienceHomeTableView.swift in Sources */,
 				65A5BE0D21F8438300B2EC75 /* ExperienceDetailCell_Normal.swift in Sources */,
 				65A5BE0E21F8438300B2EC75 /* CustomCameraCell.swift in Sources */,
@@ -1668,6 +1713,7 @@
 				650B68B92276A4DB00BC62C6 /* ExtensionUserDefaults.swift in Sources */,
 				65DDD28521EC807700A99DDE /* Step2_1ViewController.swift in Sources */,
 				656E759F21EF00410048B7AD /* OtherPlanTableView.swift in Sources */,
+				6588852D227BDB86001C3CBB /* BaseTableView.swift in Sources */,
 				65793F1B21776870008FFF1B /* SystemManager.swift in Sources */,
 				65E4EFAC2276957200200D53 /* LLFilledPageControl.swift in Sources */,
 				650B68AA2276A0FF00BC62C6 /* ExtensionString.swift in Sources */,
@@ -1680,6 +1726,7 @@
 				6586FE1121E5DA1B009CA27F /* Step2MainViewController.swift in Sources */,
 				65DDD28F21EC85A300A99DDE /* IBInspectableImageView.swift in Sources */,
 				650B68CF2276B32D00BC62C6 /* ExploreModels.swift in Sources */,
+				65888530227BE5BF001C3CBB /* MessageListCell.swift in Sources */,
 				6572298821D20AEE00B6271C /* MyExperienceListTableView.swift in Sources */,
 				65ACB8E3226870BF00AF34E3 /* Observable.swift in Sources */,
 				651D284121C89B3A00152A5E /* TravelDataTableView.swift in Sources */,
@@ -1705,6 +1752,7 @@
 				65DDD2A021EDB16200A99DDE /* Step3_1ViewController.swift in Sources */,
 				65DDD29221EC88D300A99DDE /* UploadPhotoTableView.swift in Sources */,
 				65525A9E21C8C66B0041E5EE /* IBInspectableTextView.swift in Sources */,
+				65888528227BDA54001C3CBB /* MessageListTableView.swift in Sources */,
 				6574000B2178BB990072C636 /* ExperienceHomeTableView.swift in Sources */,
 				65C06F89219AA79D00190464 /* ExperienceDetailCell_Normal.swift in Sources */,
 				65FB447A21F02E8900FABFB3 /* CustomCameraCell.swift in Sources */,

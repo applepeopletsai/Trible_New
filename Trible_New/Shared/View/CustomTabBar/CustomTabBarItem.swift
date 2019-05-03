@@ -21,6 +21,7 @@ class CustomTabBarItem: UIView {
 
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var badgeLabel: UILabel!
+    @IBOutlet private weak var badgeLabelWidth: NSLayoutConstraint!
 
     private weak var delegate: CustomTabBarItemDelegate?
     
@@ -30,13 +31,13 @@ class CustomTabBarItem: UIView {
         }
     }
     
-    private var badge: String? = nil {
+    private var badge: Int = 0 {
         didSet {
             setupBadgeLabel()
         }
     }
     
-    // MARK: Method
+    // MARK: Public Function
     static func getItemWith(frame: CGRect, selectImage: String, unSelectImage: String, tag: Int, backgroundColor: UIColor, delegate: CustomTabBarItemDelegate?) -> CustomTabBarItem? {
         
         guard let tabBarItem = Bundle.main.loadNibNamed(String(describing: CustomTabBarItem.self), owner: nil, options: nil)?.first as? CustomTabBarItem else {
@@ -61,19 +62,24 @@ class CustomTabBarItem: UIView {
     }
     
     /// 改變小紅點數字
-    func changeBadge(badge: String) {
+    func changeBadge(_ badge: Int) {
         self.badge = badge
     }
     
+    // MARK: Private Function
     private func setupBadgeLabel() {
-        self.badgeLabel.text = self.badge
+        self.badgeLabel.text = (self.badge > 99) ? "99+" : String(self.badge)
         
-        let transform: CGAffineTransform = (self.badge == nil) ? CGAffineTransform(scaleX: 0.01, y: 0.01) : .identity
-        let alpha: CGFloat = (self.badge == nil) ? 0 : 1
+        //調整badgeLabel寬度
+        let width = (self.badgeLabel.intrinsicContentSize.width + 5) > 20 ? self.badgeLabel.intrinsicContentSize.width + 5 : 20
+        self.badgeLabelWidth.constant = width
         
-        UIView.animate(withDuration: 0.3, animations: {
-            self.badgeLabel.transform = transform
-            self.badgeLabel.alpha = alpha
+        let transform: CGAffineTransform = (self.badge == 0) ? CGAffineTransform(scaleX: 0.01, y: 0.01) : .identity
+        let alpha: CGFloat = (self.badge == 0) ? 0 : 1
+        
+        UIView.animate(withDuration: 0.3, animations: { [weak self] in
+            self?.badgeLabel.transform = transform
+            self?.badgeLabel.alpha = alpha
         })
     }
     

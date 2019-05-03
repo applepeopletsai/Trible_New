@@ -21,7 +21,7 @@ class BasicPlanTableView: UITableView {
         self.delegate = self
         self.tableFooterView = UIView()
         self.register(UINib(nibName: String(describing: BasicPlanHeaderView.self), bundle: nil), forHeaderFooterViewReuseIdentifier: String(describing: BasicPlanHeaderView.self))
-        self.register(UINib(nibName: String(describing: BasicPlanCell.self), bundle: nil), forCellReuseIdentifier: String(describing: BasicPlanCell.self))
+        self.register(UINib(nibName: String(describing: BasicPlanCell.self), bundle: nil), forCellReuseIdentifier: BasicPlanCell.identifier)
     }
 }
 

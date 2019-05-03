@@ -42,7 +42,7 @@ class OtherPlanTableView: UITableView {
         self.dataSource = self
         self.delegate = self
         self.tableFooterView = UIView()
-        self.register(UINib(nibName: String(describing: OtherPlanCell.self), bundle: nil), forCellReuseIdentifier: String(describing: OtherPlanCell.self))
+        self.register(UINib(nibName: String(describing: OtherPlanCell.self), bundle: nil), forCellReuseIdentifier: OtherPlanCell.identifier)
     }
 }
 

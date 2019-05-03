@@ -8,39 +8,26 @@
 
 import UIKit
 
-class MyExperienceListTableView: UITableView {
+class MyExperienceListTableView: BaseTableView {
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        configureTableView()
+    // MARK: Override Function
+    override func configureTableView() {
+        super.configureTableView()
+        self.register(UINib(nibName: String(describing: MyExperienceListCell.self), bundle: nil), forCellReuseIdentifier: MyExperienceListCell.identifier)
     }
     
-    private func configureTableView() {
-        self.dataSource = self
-        self.delegate = self
-        self.showsHorizontalScrollIndicator = false
-        self.showsVerticalScrollIndicator = false
-        self.delaysContentTouches = false
-        self.allowsSelection = false
-        self.tableFooterView = UIView()
-        self.register(UINib(nibName: String(describing: MyExperienceListCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MyExperienceListCell.self))
-    }
-}
-
-extension MyExperienceListTableView: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // MARK: Override UITableViewDataSource
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MyExperienceListCell.self), for: indexPath) as! MyExperienceListCell
         return cell
     }
-}
-
-extension MyExperienceListTableView: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    
+    // MARK: Override UITableViewDelegate
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
     

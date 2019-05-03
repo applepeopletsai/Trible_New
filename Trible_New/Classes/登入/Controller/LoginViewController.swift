@@ -26,12 +26,12 @@ class LoginViewController: BaseViewController {
     
     // MARK: Event Handler
     @IBAction private func loginButtonPress(_ sender: UIButton) {
-        if (accountTextField.text?.count ?? 0) == 0 ||
-           (passwordTextField.text?.count ?? 0) == 0 {
-            return
-        }
+//        if (accountTextField.text?.count ?? 0) == 0 ||
+//           (passwordTextField.text?.count ?? 0) == 0 {
+//            return
+//        }
         
-        LoginService.login(userName: accountTextField.text, password: passwordTextField.text, completion: {
+        LoginService.login(userName: "afriend2301@hotmail.com", password: "a23019840", completion: {
             [weak self] in
             let naviVC = UINavigationController(rootViewController: CustomTabBarController())
             naviVC.isNavigationBarHidden = true

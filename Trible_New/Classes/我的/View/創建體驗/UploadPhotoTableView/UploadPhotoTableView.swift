@@ -47,7 +47,7 @@ class UploadPhotoTableView: UITableView {
     private func configureTableView() {
         self.dataSource = self
         self.delegate = self
-        self.register(UINib(nibName: String(describing: UploadPhotoCell.self), bundle: nil), forCellReuseIdentifier: String(describing: UploadPhotoCell.self))
+        self.register(UINib(nibName: String(describing: UploadPhotoCell.self), bundle: nil), forCellReuseIdentifier: UploadPhotoCell.identifier)
     }
 }
 

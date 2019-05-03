@@ -9,7 +9,6 @@
 import UIKit
 
 typealias actionHandler = (() -> Void)
-typealias pickerConfirmHandler = (_ item: String, _ selectIndex: Int) -> Void
 
 let screenSize = UIScreen.main.bounds.size
 let screenWidth = screenSize.width
@@ -25,12 +24,3 @@ let kStoryBoard_My = "My"
 let kStoryBoard_CreateExperience = "CreateExperience"
 let kStoryBoard_Shared = "Shared"
 
-let kUserDefaultKey_token = "UserDefaultKey_token"
-
-func safeArea() -> UIEdgeInsets {
-    if #available(iOS 11, *) {
-        return UIApplication.shared.keyWindow?.safeAreaInsets ?? UIEdgeInsets.zero
-    } else {
-        return UIEdgeInsets.zero
-    }
-}
